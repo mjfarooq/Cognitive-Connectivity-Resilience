@@ -4,4 +4,4 @@ Source code for the paper "Cognitive Connectivity Resilience in Multi-layer Remo
 
 ## Directions: 
 
-Use the main.m file to run the code. Auxiliary files bump.m and nearestCluster.m are also provided.
+Use the main.m file to run the code. Auxiliary files bump.m and nearest_cluster.m are also provided.
