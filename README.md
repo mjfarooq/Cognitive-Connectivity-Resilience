@@ -1,6 +1,6 @@
 # Description: 
 
-Source code for the paper "Cognitive Connectivity Resilience in Multi-layer Remotely Deployed Mobile Internet of Things"
+Source code for the paper "Cognitive Connectivity Resilience in Multi-layer Remotely Deployed Mobile Internet of Things" in IEEE Global Communications Conference (Globecom 2017), Singapore.
 
 ## Directions: 
 
