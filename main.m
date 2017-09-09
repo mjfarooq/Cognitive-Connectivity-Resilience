@@ -207,11 +207,9 @@ for iter = 1:Maxiter
         
         
         
-        %sc1 = scatter(Y(:,1),Y(:,2),14,'.');
         sc1 = scatter3(Y(:,1),Y(:,2), zeros(Num_mobile_devices,1),12,'.')
 
         hold on
-        %sc2 = scatter(X_new(:,1), X_new(:,2),'*','g');
         sc2 = scatter3(X_new(:,1),X_new(:,2), 20*ones(length(X_new(:,1)),1),30,'^','Filled')
         if iter > Attack_iter
             %sc3 = scatter(Failed_coord(:,1), Failed_coord(:,2),'*','r');
@@ -220,15 +218,14 @@ for iter = 1:Maxiter
         else
             legend([sc2,sc1],'Overlay Device','Underlay Device','location','northwest');
         end
-        %text(X_new(:,1) + 1, X_new(:,2) + 1, num2str(Num_users),'FontSize',8)
         
 
         [X_ax, Y_ax] = gplot(A_new,[X_new(:,1:2) 20*ones(length(X_new),1)]);
         plot3(X_ax,Y_ax, 20*ones(length(X_ax),1), 'Color', [0.9290 ,0.6940,0.1250])
         %gplot(A_new,X_new(:,1:2),'-')
-        %axis([-150 150 -150 150])
+        %axis([-150 150 -150 150]) 
         view(-55,43)
-        %view(-180,90)
+        %view(-180,90)  Uncomment to change viewing angle of plot
         axis([-150 100 -150 150 0 30])
         drawnow;
         if iter > Plotiter
@@ -242,27 +239,10 @@ for iter = 1:Maxiter
             Failed_coord = X_new(failed_id,:);
             X_new = X_new( setdiff(1:length(X_new),failed_id) ,:);
         end
-       
-        %pause(0.01)
-%         if mod(iter,100) == 0
-%             figure
-%             scatter(X_new(:,1), X_new(:,2))
-%             hold on
-%         end
-        
+               
 end
 
 
-% figure
-% scatter3(Y(:,1),Y(:,2), zeros(Num_mobile_devices,1),10,'.')
-% title('Final Configuration');
-% hold on
-% scatter3(X_new(:,1), X_new(:,2),20*ones(length(X_new),1),'^','Filled')
-% %scatter3(Failed_coord(:,1), Failed_coord(:,2),20*ones(length(Failed_coord),1),'*','r');
-% axis([-150 100 -150 150 0 30])
-% %text(X_new(:,1), X_new(:,2) , num2str(Num_users))
-% [X_ax, Y_ax] = gplot(A_new,[X_new(:,1:2) 20*ones(length(X_new),1)]);
-% plot3(X_ax,Y_ax, 20*ones(length(X_ax),1), 'Color', [0.9290 ,0.6940,0.1250])
 
 
 
